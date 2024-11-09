@@ -29,4 +29,12 @@ resource "aws_lambda_function_url" "lambda_url" {
   authorization_type = "NONE"
 }
 
-##Add in additional code for AWS Event bridge, or API Gateway here for Lambda Deployment
+# Grant permission for youtube-job-verification to invoke youtube-service-2
+resource "aws_lambda_permission" "allow_invocation_from_youtube_job_verification" {
+  statement_id  = "AllowInvocationFromYoutubeJobVerification"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.api_lambda.function_name
+  principal     = "lambda.amazonaws.com"
+  source_arn    = data.aws_iam_role.existing_lambda_role.arn # ARN of the IAM role of youtube-job-verification
+}
+
