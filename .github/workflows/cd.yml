@@ -35,5 +35,5 @@ jobs:
         working-directory: terraform
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve -var="aws_access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" -var="aws_secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" -var="API_KEY=${{ secrets.API_KEY }}"
+        run: terraform apply -auto-approve -var="aws_access_key=${{ secrets.AWS_ACCESS_KEY_ID }}" -var="aws_secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}" -var="API_KEY=${{ secrets.API_KEY }}" -var="AWS_BASIC_BUCKET=${{ secrets.AWS_BASIC_BUCKET }}" -var="AWS_BASIC_BUCKET_KEY=${{ secrets.AWS_BASIC_BUCKET_KEY }}" -var="GPT_URL=${{ secrets.GPT_URL }}" -var="AWS_REGION=${{ secrets.AWS_REGION }}"
         working-directory: terraform
