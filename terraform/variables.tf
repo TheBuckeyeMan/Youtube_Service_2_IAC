@@ -17,3 +17,19 @@ variable "API_KEY" {
   description = "API Key"
   type = string
 }
+variable "AWS_BASIC_BUCKET" {
+  description = "AWS_BASIC_BUCKET"
+  type = string
+}
+variable "AWS_BASIC_BUCKET_KEY" {
+  description = "AWS_BASIC_BUCKET_KEY"
+  type = string
+}
+variable "GPT_URL" {
+  description = "GPT_URL"
+  type = string
+}
+variable "AWS_REGION" {
+  description = "AWS_REGION"
+  type = string
+}
