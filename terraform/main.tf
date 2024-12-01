@@ -17,11 +17,20 @@ resource "aws_lambda_function" "api_lambda" {
   environment {
     variables = {
       API_KEY = var.API_KEY
+      AWS_BASIC_BUCKET = var.AWS_BASIC_BUCKET
+      AWS_BASIC_BUCKET_KEY = var.AWS_BASIC_BUCKET_KEY
+      GPT_URL = var.GPT_URL
+      GPT_BUCKET_NAME = var.GPT_BUCKET_NAME
+      GPT_BUCKET_KEY = var.GPT_BUCKET_KEY
+      LOGGING_BUCKET_NAME = var.LOGGING_BUCKET_NAME
+      LOGGING_BUCKET_KEY = var.LOGGING_BUCKET_KEY
+      AWS_REGION = var.AWS_REGION
     }
   }
 
   timeout = 30 #Adjust the timeout of the function IN SECONDS
   memory_size = 512 #Adjust the Memory of the function
+
 }
 
 resource "aws_lambda_function_url" "lambda_url" {
