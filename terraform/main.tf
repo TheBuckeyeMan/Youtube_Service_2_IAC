@@ -27,7 +27,7 @@ resource "aws_lambda_function" "api_lambda" {
     }
   }
 
-  timeout = 30 #Adjust the timeout of the function IN SECONDS
+  timeout = 60 #Adjust the timeout of the function IN SECONDS
   memory_size = 512 #Adjust the Memory of the function
 
 }
