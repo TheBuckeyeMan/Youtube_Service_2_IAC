@@ -50,3 +50,7 @@ variable "AWS_REGION" {
   type = string
 }
 
+variable "TAGS_BUCKET_KEY" {
+  description = "TAGS_BUCKET_KEY"
+  type = string
+}

@@ -24,6 +24,7 @@ resource "aws_lambda_function" "api_lambda" {
       GPT_BUCKET_KEY = var.GPT_BUCKET_KEY
       LOGGING_BUCKET_NAME = var.LOGGING_BUCKET_NAME
       LOGGING_BUCKET_KEY = var.LOGGING_BUCKET_KEY
+      TAGS_BUCKET_KEY = var.TAGS_BUCKET_KEY
     }
   }
 
